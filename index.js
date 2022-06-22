@@ -3,6 +3,9 @@ const app = express();
 
 const port = 8000;
 
+//to use express routes
+app.use('/' , require('./routes'));
+
 app.listen(port, function(err){
     if(err){
         //interpolation method to print
@@ -10,4 +13,4 @@ app.listen(port, function(err){
         
     }
     console.log(`server is running fine on port: ${port}`);
-});
+}); 
